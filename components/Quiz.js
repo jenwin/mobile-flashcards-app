@@ -39,6 +39,22 @@ class Quiz extends Component {
     this.setState({ showQuestion: true })
   )
 
+  correctAnswer = () => {
+    const { questionIndex } = this.state;
+    this.setState(prevState => ({
+      correct: prevState.correct + 1,
+      questionIndex: questionIndex + 1
+    }));
+  }
+
+  incorrectAnswer = () => {
+    const { questionIndex } = this.state;
+    this.setState(prevState => ({
+      incorrect: prevState.incorrect + 1,
+      questionIndex: questionIndex + 1
+    }));
+  }
+
   restartQuiz = () => {
     this.setState({
       questionIndex: 0,
@@ -127,17 +143,13 @@ class Quiz extends Component {
 
         <TouchableOpacity
           style={[styles.quizBtnStyles, styles.quizCorrectColor]}
-          onPress={() => this.setState({
-            correct: correct + 1,
-            questionIndex: questionIndex + 1})}>
+          onPress={this.correctAnswer}>
           <Text style={{textAlign: "center", fontWeight: "bold"}}>Correct</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={[styles.quizBtnStyles, styles.quizIncorrectColor]}
-          onPress={() => this.setState({
-            incorrect: incorrect + 1,
-            questionIndex: questionIndex + 1})}>
+          onPress={this.incorrectAnswer}>
           <Text style={{textAlign: "center", fontWeight: "bold"}}>Incorrect</Text>
         </TouchableOpacity>
       </View>
