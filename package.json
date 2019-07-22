@@ -20,6 +20,7 @@
     "react-navigation": "^3.11.1",
     "react-redux": "^7.1.0",
     "redux": "^4.0.4",
+    "uglify-js": "^3.6.0",
     "yarn": "^1.17.3"
   },
   "devDependencies": {
