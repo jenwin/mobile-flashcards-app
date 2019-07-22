@@ -9,9 +9,11 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^10.0.3",
+    "braces": "^3.0.2",
     "expo": "^33.0.0",
     "expo-constants": "^5.0.1",
     "expo-permissions": "^5.0.1",
+    "mem": "^5.1.1",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-id-generator": "^1.0.0",
@@ -21,6 +23,7 @@
     "react-redux": "^7.1.0",
     "redux": "^4.0.4",
     "uglify-js": "^3.6.0",
+    "ws": "^7.1.1",
     "yarn": "^1.17.3"
   },
   "devDependencies": {
