@@ -86,7 +86,7 @@ class Quiz extends Component {
 
   if (questionIndex === cardLength) {
     return (
-      <View style={{ alignItems: "center" }}>
+      <View style={styles.scoreWrapper}>
         <Text style={styles.scoreText}>Your Score</Text>
         <View style={styles.resultsWrapper}>
           <Text style={styles.resultsPercent}>{percentScore}</Text>
@@ -109,8 +109,8 @@ class Quiz extends Component {
   }
 
   return (
-    <View style={{ padding: 30 }}>
-      <Text style={{ fontSize: 15, fontWeight: "bold" }}>
+    <View style={styles.toggleWrapper}>
+      <Text style={styles.remainingCardsNum}>
         {deckNumber} / {cardLength}
       </Text>
 
@@ -128,7 +128,7 @@ class Quiz extends Component {
         )}
       </View>
 
-      <View style={{ alignItems: "center" }}>
+      <View style={styles.cardInfo}>
         <View style={styles.cardWrapper}>
           { !showQuestion ? (
             <Text style={styles.deckText}>
@@ -144,13 +144,13 @@ class Quiz extends Component {
         <TouchableOpacity
           style={[styles.quizBtnStyles, styles.quizCorrectColor]}
           onPress={this.correctAnswer}>
-          <Text style={{textAlign: "center", fontWeight: "bold"}}>Correct</Text>
+          <Text style={styles.answerText}>Correct</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={[styles.quizBtnStyles, styles.quizIncorrectColor]}
           onPress={this.incorrectAnswer}>
-          <Text style={{textAlign: "center", fontWeight: "bold"}}>Incorrect</Text>
+          <Text style={styles.answerText}>Incorrect</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -165,6 +165,9 @@ const styles = StyleSheet.create({
   },
   emptyDeckText: {
     fontSize: 17
+  },
+  scoreWrapper: {
+    alignItems: "center"
   },
   deckText: {
     fontSize: 17,
@@ -249,6 +252,20 @@ const styles = StyleSheet.create({
   backToDeck: {
     backgroundColor: orange,
     borderColor: orange
+  },
+  toggleWrapper: {
+    padding: 30 
+  },
+  remainingCardsNum: {
+    fontSize: 15,
+    fontWeight: "bold"
+  },
+  cardInfo: {
+    alignItems: "center" 
+  },
+  answerText: {
+    textAlign: "center",
+    fontWeight: "bold"
   }
 });
 

@@ -63,18 +63,18 @@ class DeckOptions extends Component {
         <View style={styles.buttonWrapper}>
           <Text style={styles.deckTitle}>{deckTitle}</Text>
           <Text style={styles.card}>{numCards} Cards</Text>
-          <View style={{ marginBottom: 15, alignItems: "center" }}>
+          <View style={styles.addCardView}>
             <TouchableOpacity
               onPress={() => navigation.navigate('AddCardScreen', { deckID: deckEntry, deckTitle: deckTitle })}>
               <Text style={styles.submitBtn}>Add Card</Text>
             </TouchableOpacity>
           </View>
-          <View style={{ alignItems: "center" }}>
+          <View style={styles.startQuizView}>
             <TouchableOpacity
               onPress={() => navigation.navigate('StartQuizScreen', { deckID: deckEntry })}>
               <Text style={[styles.submitBtn, styles.quizBtn]}>Start a Quiz</Text>
             </TouchableOpacity>
-            <View style={{ justifyContent: "center", marginTop: 60 }}>
+            <View style={styles.deleteDeckView}>
               <TouchableOpacity
                 onPress={() => this.handleDeleteDeck(deckEntry)}>
                 <Text style={styles.deleteDeckBtn}>DELETE DECK</Text>
@@ -105,6 +105,10 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
     fontWeight: "bold"
   },
+  addCardView: {
+    marginBottom: 15,
+    alignItems: "center" 
+  },
   submitBtn: {
     fontSize: 17,
     padding: 12,
@@ -113,6 +117,13 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     backgroundColor: black,
     color: white
+  },
+  startQuizView: {
+    alignItems: "center"
+  },
+  deleteDeckView: {
+    justifyContent: "center",
+    marginTop: 60
   },
   deleteDeckBtn: {
     fontSize: 15,
