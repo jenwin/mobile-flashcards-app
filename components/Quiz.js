@@ -86,7 +86,7 @@ class Quiz extends Component {
 
   if (questionIndex === cardLength) {
     return (
-      <View style={styles.scoreWrapper}>
+      <View style={styles.scoreCardInfoWrapper}>
         <Text style={styles.scoreText}>Your Score</Text>
         <View style={styles.resultsWrapper}>
           <Text style={styles.resultsPercent}>{percentScore}</Text>
@@ -128,7 +128,7 @@ class Quiz extends Component {
         )}
       </View>
 
-      <View style={styles.cardInfo}>
+      <View style={styles.scoreCardInfoWrapper}>
         <View style={styles.cardWrapper}>
           { !showQuestion ? (
             <Text style={styles.deckText}>
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
   emptyDeckText: {
     fontSize: 17
   },
-  scoreWrapper: {
+  scoreCardInfoWrapper: {
     alignItems: "center"
   },
   deckText: {
@@ -259,9 +259,6 @@ const styles = StyleSheet.create({
   remainingCardsNum: {
     fontSize: 15,
     fontWeight: "bold"
-  },
-  cardInfo: {
-    alignItems: "center" 
   },
   answerText: {
     textAlign: "center",
