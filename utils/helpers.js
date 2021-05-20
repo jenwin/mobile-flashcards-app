@@ -1,5 +1,5 @@
 import { AsyncStorage } from 'react-native'
-import { Notifications } from 'expo'
+import * as Notifications from 'expo-notifications'
 import * as Permissions from 'expo-permissions'
 const NOTIFICATION_KEY = 'notifications:decks'
 
@@ -19,7 +19,7 @@ export function createNotification() {
 
 export function clearLocalNotification() {
   return AsyncStorage.removeItem(NOTIFICATION_KEY)
-   .then(Notifications.cancelAllScheduledNotificationsAsync);
+   .then(Notifications.cancelAllScheduledNotificationsAsync());
 }
 
 export function setLocalNotification() {
