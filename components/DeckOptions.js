@@ -30,7 +30,8 @@ class DeckOptions extends Component {
   componentDidMount() {
     Animated.timing(this.animatedValue, {
       toValue: 255,
-      duration: 1300
+      duration: 1300,
+      useNativeDriver: false
     }).start();
   }
 
