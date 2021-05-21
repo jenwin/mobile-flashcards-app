@@ -26,7 +26,7 @@ export function setLocalNotification() {
     .then(JSON.parse)
     .then(data => {
       if (data === null) {
-        Notifications.requestPermissionsAsync();
+        Notifications.requestPermissionsAsync()
           .then(({ status }) => {
             if (status === 'granted') {
               Notifications.cancelAllScheduledNotificationsAsync();

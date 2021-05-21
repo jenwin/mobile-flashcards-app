@@ -23,16 +23,23 @@ class DeckOptions extends Component {
     title: navigation.getParam("deckTitle")
   });
 
-  componentWillMount() {
-    this.animatedValue = new Animated.Value(0);
+  state = {
+    animatedValue: new Animated.Value(0),
+    loaded: false
   }
 
   componentDidMount() {
-    Animated.timing(this.animatedValue, {
-      toValue: 255,
-      duration: 1300,
-      useNativeDriver: false
-    }).start();
+    const { animatedValue } = this.state;
+    this.setState({
+      animatedValue,
+      loaded: true
+    }, () => {
+      Animated.timing(animatedValue, {
+        toValue: 255,
+        duration: 1300,
+        useNativeDriver: false
+      }).start();
+    });
   }
 
   handleDeleteDeck = deck => {
@@ -45,10 +52,11 @@ class DeckOptions extends Component {
 
   render() {
     const { navigation } = this.props;
+    const { animatedValue } = this.state;
     const deckTitle = navigation.state.params.deckTitle;
     const numCards = navigation.state.params.numCards;
     const deckEntry = navigation.state.params.EntryID;
-    const changeColor = this.animatedValue.interpolate({
+    const changeColor = animatedValue.interpolate({
       inputRange: [0, 255],
       outputRange: [
        'rgb(117, 255, 179)',
