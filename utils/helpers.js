@@ -1,6 +1,5 @@
 import { AsyncStorage } from 'react-native'
 import * as Notifications from 'expo-notifications'
-import * as Permissions from 'expo-permissions'
 const NOTIFICATION_KEY = 'notifications:decks'
 
 export function createNotification() {
@@ -27,7 +26,7 @@ export function setLocalNotification() {
     .then(JSON.parse)
     .then(data => {
       if (data === null) {
-        Permissions.askAsync(Permissions.NOTIFICATIONS)
+        Notifications.requestPermissionsAsync();
           .then(({ status }) => {
             if (status === 'granted') {
               Notifications.cancelAllScheduledNotificationsAsync();
