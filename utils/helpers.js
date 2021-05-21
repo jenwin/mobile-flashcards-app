@@ -19,7 +19,7 @@ export function createNotification() {
 
 export function clearLocalNotification() {
   return AsyncStorage.removeItem(NOTIFICATION_KEY)
-   .then(Notifications.cancelAllScheduledNotificationsAsync());
+   .then(Notifications.cancelAllScheduledNotificationsAsync);
 }
 
 export function setLocalNotification() {
@@ -34,8 +34,8 @@ export function setLocalNotification() {
 
               let tomorrow = new Date();
               tomorrow.setDate(tomorrow.getDate() + 1);
-              tomorrow.setHours(10);
-              tomorrow.setMinutes(30);
+              tomorrow.setHours(20);
+              tomorrow.setMinutes(45);
 
               Notifications.scheduleLocalNotificationAsync(
                 createNotification(), {
