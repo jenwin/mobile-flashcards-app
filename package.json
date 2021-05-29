@@ -36,7 +36,7 @@
     "uglify-js": "^3.6.0",
     "unimodules-permissions-interface": "~6.1.0",
     "webpack": "^4.37.0",
-    "ws": "^7.1.1",
+    "ws": "^7.4.6",
     "yarn": "^1.17.3"
   },
   "devDependencies": {
