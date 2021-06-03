@@ -42,7 +42,7 @@
     "unimodules-permissions-interface": "~6.1.0",
     "webpack": "^4.37.0",
     "ws": "^7.4.6",
-    "yarn": "^1.17.3"
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "babel-preset-expo": "8.3.0",
