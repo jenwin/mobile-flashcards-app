@@ -34,6 +34,7 @@
     "redux": "^4.0.4",
     "redux-persist": "^5.10.0",
     "serialize-javascript": "^2.1.2",
+    "ssri": "^8.0.1",
     "uglify-js": "^3.6.0",
     "unimodules-permissions-interface": "~6.1.0",
     "webpack": "^4.37.0",
