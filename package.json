@@ -12,6 +12,7 @@
     "@react-navigation/bottom-tabs": "^5.11.11",
     "@react-navigation/drawer": "^5.12.5",
     "@react-navigation/stack": "^5.14.5",
+    "acorn": "^8.3.0",
     "braces": "^3.0.2",
     "elliptic": "^6.5.4",
     "expo": "^41.0.0",
