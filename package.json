@@ -43,6 +43,7 @@
     "unimodules-permissions-interface": "~6.1.0",
     "webpack": "^4.37.0",
     "ws": "^7.4.6",
+    "y18n": "^5.0.8",
     "yarn": "^1.22.10"
   },
   "devDependencies": {
