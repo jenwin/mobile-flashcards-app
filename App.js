@@ -24,7 +24,7 @@ import AddCard from './components/AddCard'
 import AddDeck from './components/AddDeck'
 import Quiz from './components/Quiz'
 
-const FlashCardsStausBar = ({backgroundColor, ...props}) => {
+const FlashCardsStatusBar = ({backgroundColor, ...props}) => {
   return (
     <View style={{ backgroundColor, height: Constants.statusBarHeight }}>
       <StatusBar translucent backgroundColor={backgroundColor} {...props} />
@@ -96,7 +96,7 @@ class Main extends Component {
   render() {
     return (
       <Provider store={createStore(reducer)}>
-        <FlashCardsStausBar
+        <FlashCardsStatusBar
           backgroundColor={gray}
           barStyle="light-content"
         />
