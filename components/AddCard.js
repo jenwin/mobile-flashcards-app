@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import {
   TextInput,
-  View,
   StyleSheet,
   TouchableOpacity,
   Text,
