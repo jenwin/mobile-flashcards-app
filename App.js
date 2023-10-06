@@ -23,6 +23,7 @@ import DeckOptions from './components/DeckOptions'
 import AddCard from './components/AddCard'
 import AddDeck from './components/AddDeck'
 import Quiz from './components/Quiz'
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const FlashCardsStatusBar = ({backgroundColor, ...props}) => {
   return (
@@ -100,7 +101,9 @@ class Main extends Component {
           backgroundColor={gray}
           barStyle="light-content"
         />
-        <RootNav />
+        <GestureHandlerRootView>
+          <RootNav />
+        </GestureHandlerRootView>
       </Provider>
     );
   }
